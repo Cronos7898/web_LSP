@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Práctica · Aula LSP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <span class="logo-mark">LSP</span>
+        <div class="logo-text-group">
+          <span class="logo-title">Aula LSP</span>
+          <span class="logo-subtitle">Lengua de Señas Peruana</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="que-es-lsp.html">¿Qué es LSP?</a>
+        <a href="abecedario.html">Abecedario</a>
+        <a href="practica.html" class="active">Práctica</a>
+        <a href="recursos.html">Recursos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrapper">
+      <section class="section-card">
+        <h1 class="section-title">Práctica de señas con cámara o video</h1>
+        <p class="section-subtitle">
+          Esta interfaz permite practicar algunas señas de la LSP utilizando un
+          modelo de reconocimiento automático que analiza la imagen capturada
+          por la cámara web o por un video cargado.
+        </p>
+
+        <div class="practice-layout">
+          <!-- Panel de instrucciones -->
+          <div class="practice-panel">
+            <div class="practice-steps-title">Recomendaciones antes de empezar</div>
+            <ul class="practice-steps">
+              <li>Ubícate en un lugar con iluminación frontal suficiente.</li>
+              <li>Procura que tus manos y parte superior del cuerpo sean visibles en la cámara.</li>
+              <li>Realiza la seña de forma clara y mantén la posición el tiempo indicado.</li>
+              <li>Si trabajas con video, selecciona un fragmento donde la seña se vea nítida.</li>
+            </ul>
+
+            <div class="info-block" style="margin-top: 1.3rem;">
+              <div class="info-block-title">Uso sugerido en clase</div>
+              <ul class="info-list">
+                <li>Seleccionar un conjunto pequeño de palabras para practicar en grupo.</li>
+                <li>Proponer turnos donde cada estudiante realiza una seña y el sistema la reconoce.</li>
+                <li>Reflexionar sobre la importancia de la expresión facial y el contexto al usar LSP.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Área donde se integrará cámara / video y resultado -->
+          <div class="video-area">
+            <div class="video-area-title">Área de reconocimiento</div>
+            <p class="video-area-text">
+              En este espacio se muestra la imagen de la cámara web o el video seleccionado por
+              la persona usuaria. El modelo analiza los fotogramas y estima la palabra o seña
+              más probable según los movimientos y configuraciones de mano detectados.
+            </p>
+
+            <!-- Aquí se integrará los elementos reales de video/cámara -->
+            <div id="video-container" style="margin-top: 1rem;">
+              <!-- Ejemplo de lugar donde podría ir un &lt;video&gt; o &lt;canvas&gt; -->
+            </div>
+
+            <div class="result-box">
+              <div class="result-label">Resultado del reconocimiento</div>
+              <div class="result-text" id="texto-resultado">
+                La palabra reconocida se mostrará aquí cuando el sistema procese la seña.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Proyecto educativo sobre Lengua de Señas Peruana ·
+      <span>Grupo 1 · Curso: Machine Learning</span>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
